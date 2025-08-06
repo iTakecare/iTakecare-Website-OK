@@ -1,0 +1,1 @@
+export { SectionAvantage } from "./SectionAvantage";

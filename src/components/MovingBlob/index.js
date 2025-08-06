@@ -1,0 +1,1 @@
+export { MovingBlob } from './MovingBlob';

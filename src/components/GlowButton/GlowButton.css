@@ -1,0 +1,54 @@
+.glow-button {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: translateZ(0);
+}
+
+.glow-button-content {
+  position: relative;
+  z-index: 2;
+  display: block;
+}
+
+.glow-button-glow {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s;
+  z-index: 1;
+}
+
+.glow-button:hover .glow-button-glow {
+  left: 100%;
+}
+
+.glow-button.primary {
+  background: linear-gradient(135deg, #48b5c3, #3da4b2);
+  color: white;
+  box-shadow: 0 4px 15px rgba(72, 181, 195, 0.3);
+}
+
+.glow-button.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(72, 181, 195, 0.4);
+}
+
+.glow-button.secondary {
+  background: white;
+  color: #222222;
+  border: 2px solid #e1e1e1;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.glow-button.secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: #48b5c3;
+}

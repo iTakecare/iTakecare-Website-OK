@@ -1,0 +1,1 @@
+export { PixelBackground } from './PixelBackground';
